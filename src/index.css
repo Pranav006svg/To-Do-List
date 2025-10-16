@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light theme tokens */
+    --background: 210 40% 98%; /* very light */
+    --foreground: 220 15% 12%; /* dark text */
+
+    --card: 210 50% 100%;
+    --card-foreground: 220 15% 12%;
+
+    --popover: 210 50% 100%;
+    --popover-foreground: 220 15% 12%;
+
+    --primary: 258 78% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 264 85% 60%;
+
+    --secondary: 210 16% 94%;
+    --secondary-foreground: 220 12% 18%;
+
+    --muted: 215 10% 90%;
+    --muted-foreground: 215 10% 55%;
+
+    --accent: 200 80% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 78% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 215 15% 85%;
+    --input: 215 15% 95%;
+    --ring: 258 78% 45%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(258 78% 45%) 0%, hsl(210 90% 55%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(215 10% 98%) 100%);
+    --shadow-glow: 0 10px 30px rgba(16, 24, 40, 0.06);
+    --transition-smooth: all 0.28s cubic-bezier(0.2, 0.8, 0.2, 1);
+
+    --sidebar-background: 0 0% 100%;
+
+    --sidebar-foreground: 220 12% 18%;
+
+    --sidebar-primary: 220 14% 12%;
+
+    --sidebar-primary-foreground: 0 0% 100%;
+
+    --sidebar-accent: 210 16% 94%;
+
+    --sidebar-accent-foreground: 220 12% 18%;
+
+    --sidebar-border: 215 14% 92%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep dark overrides light and subtle; project uses light theme by default. */
+    --background: 220 13% 12%;
+    --foreground: 210 35% 96%;
+    --card: 220 12% 14%;
+    --card-foreground: 210 40% 98%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
