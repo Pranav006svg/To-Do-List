@@ -153,6 +153,6 @@ Use `.env.example` as a template. Add `.env` to `.gitignore` to avoid committing
 
 ## Author
 
-- RANGESHPANDIAN PT
+- M P Pranav Kumar
 
 
